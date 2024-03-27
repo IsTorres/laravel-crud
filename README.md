@@ -1,7 +1,5 @@
 # laravel-crud
 
-laravel-crud
-
 ## para rodar o projeto:
 
 -   clone o repo
@@ -18,3 +16,7 @@ laravel-crud
     -   `php artisan migrate`
 -   inicie o servidor:
     -   `php artisan serve`
+
+## Font:
+
+-   https://laravel.com/docs/11.x/controllers;
