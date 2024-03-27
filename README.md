@@ -5,6 +5,8 @@ laravel-crud
 ## para rodar o projeto:
 
 -   clone o repo
+-   instale as dependencias
+    -   `composer install`
 -   crie um arquivo .env
 -   cole nele o conteudo do .env.example
     -   no meu caso tive que adaptar o .env para usar o sqlite
