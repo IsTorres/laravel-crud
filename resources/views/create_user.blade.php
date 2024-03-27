@@ -2,7 +2,10 @@
 
 @section('content')
 
-<a href="{{ route('users.index') }}" >User list</a>
+<nav>
+    <a href="{{ route('home') }}" >Home</a>
+    <a href="{{ route('users.index') }}" >User list</a>
+</nav>
 
 <hr>
 

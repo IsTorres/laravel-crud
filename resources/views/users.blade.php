@@ -2,7 +2,11 @@
 
 @section('content')
 
-<a href="{{ route('users.create') }}" >Create</a>
+<nav>
+
+    <a href="{{ route('home') }}" >Home</a>
+    <a href="{{ route('users.create') }}" >Create</a>
+</nav>
 
 <hr>
 
