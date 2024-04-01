@@ -3,8 +3,13 @@
 ## para rodar o projeto:
 
 -   clone o repo
--   instale as dependencias
+-   atualize e instale as dependencias
+    - `sudo apt-get install php-sqlite3`
+    - certtifique-se de ter o php-xml e php-curl instalados, caso contrario: `sudo apt-get install php-xml`, `sudo apt-get install php-curl`
+    -   `npm install`
+    -   `composer update`
     -   `composer install`
+        - em seguida reinicie o service com: `sudo service nginx reload` ou `sudo service apache2 restart`
 -   crie um arquivo .env
 -   cole nele o conteudo do .env.example
     -   no meu caso tive que adaptar o .env para usar o sqlite
@@ -16,6 +21,8 @@
     -   `php artisan migrate`
 -   inicie o servidor:
     -   `php artisan serve`
+
+-   Caso ocorra algum erro 
 
 ## Font:
 
