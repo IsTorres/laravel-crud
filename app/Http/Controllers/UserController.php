@@ -48,12 +48,6 @@ class UserController extends Controller
         }
         echo 'Erro ao cadastrar!';
         return redirect()->route('users.create');
-        /**
-         *if ($create) {
-           *  return redirect()->back->with('message', 'Successfuly created');
-          *  }
-         *   return redirect()->back()->with('message', 'Failed to create');
-        */
     }
 
     /**
@@ -67,10 +61,10 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Request $request)
+    public function edit(User $user)
     {
-        $user = user::find($request->id);
-        return view('edit_user');
+        // $user = $this->user->find($user->id);
+        return view('edit_user', ['user' => $user]);
     }
 
     /**
@@ -78,7 +72,14 @@ class UserController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        // get user from model and use 'where' to find the right user with the id parameter
+        // use update() function that comes from '$this->user' model to set new data on database, using the return of request object that comes from paramete public function update
+        $updated = $this->user->where('id', $id)->update($request->except(['_token', '_method']));
+
+        if ($updated) {
+            return redirect()->route('users.index')->with('message', 'Successfully updated');
+        }
+        return redirect()->route('users.index')->with('message', 'Failed to update');
     }
 
     /**
